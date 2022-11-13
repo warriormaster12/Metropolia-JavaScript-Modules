@@ -25,7 +25,7 @@ function leapYear(input) {
 }
 
 for(let i = startYear; i <= endYear; i++) {
-    var li= document.createElement('li');
+    let li= document.createElement('li');
     if (leapYear(i)) {
         li.appendChild(document.createTextNode(i +' ,'+'leap year.'));
     }
