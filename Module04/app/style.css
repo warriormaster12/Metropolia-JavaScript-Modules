@@ -1,0 +1,115 @@
+header{
+    display: flex;
+    background: rgb(9,9,121);
+    background: linear-gradient(35deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 37.5%, rgba(0,212,255,1) 75%, rgba(9,9,121,1) 100%); 
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+    height: 35px;
+    width: 50%;
+}
+
+html{
+    background: rgb(9,9,121);
+    background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 50%, rgba(9,9,121,1) 100%); 
+}
+
+form>input{
+    border-radius: 6px;
+    border-color: rgb(0, 0, 0);
+    border-style:solid;
+    width: 60px;
+    background-color: white;
+}
+
+form>input:hover{
+    border-radius: 6px;
+    border-color: rgb(0, 47, 255);
+    border-style:solid;
+    width: 60px;
+}
+
+#query{
+    width: 25%;
+    text-align: center;
+}
+
+.container{
+    display: inline;
+    width: 60rem;
+    margin-bottom: 20px;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding-left: 30px;
+    padding-right:30px;
+}
+
+article {
+    width: calc(100% / 3 - 2rem);
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 1px #ccc solid;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 6px;
+    box-shadow: 3px 6px 6px rgb(35, 35, 35);
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+}
+article:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 2px #ccc;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+  }
+  
+  figure img {
+    width: 50%;
+  }
+  
+  figcaption {
+    text-align: center;
+  }
+
+dialog {
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    display: block;
+}
+
+dialog[open] {
+    opacity: 1;
+}
+
+dialog::backdrop {
+    background: rgb(0 0 0 / 0.8);
+}
+
+dialog span {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    filter: drop-shadow(2px 2px 2px #000);
+}
+
+dialog>span:hover{
+    color: red;
+}

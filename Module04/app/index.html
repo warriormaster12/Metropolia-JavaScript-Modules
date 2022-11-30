@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV search</title>
+    <script src="app.js" defer></script>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>My Awesome Tv-series Searcher</h1>
+      <form action="https://api.tvmaze.com/search/shows">
+        <input id="query" name="q" type="text" placeholder="search for a tv-series">
+        <input type="submit" value="Search">
+      </form>
+    </header>
+    <main>
+      <div class="container">
+        <section id="pictures">
+          
+        </section>
+      </div>
+      <dialog>
+        <span>&#x2715;</span>
+        <iframe  title="details" width="960" height="700"></iframe>
+      </dialog>
+    </main>
+  </body>
+</html>
