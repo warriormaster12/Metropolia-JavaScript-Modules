@@ -4,6 +4,13 @@ header{
     background: linear-gradient(35deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 37.5%, rgba(0,212,255,1) 75%, rgba(9,9,121,1) 100%); 
 }
 
+header>h1{
+    color:rgb(255, 255, 255);
+    text-shadow: 2px 3px #000000;
+    margin-left: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 form{
     display: flex;
     justify-content: center;
@@ -59,31 +66,39 @@ article {
     width: calc(100% / 3 - 2rem);
     box-sizing: border-box;
     cursor: pointer;
-    border: 1px #ccc solid;
+    border: 1px rgb(0, 0, 0) solid;
     padding: 1rem;
     margin: 1rem;
     border-radius: 6px;
     box-shadow: 3px 6px 6px rgb(35, 35, 35);
     transition: all 0.2s ease-in-out;
-    background-color: white;
+    background: rgb(0,243,255);
+    background: linear-gradient(31deg, rgba(0,243,255,1) 9%, rgba(64,69,255,1) 51%, rgba(0,243,255,1) 100%); 
+    font-family: 'Poppins', sans-serif;
 }
 article:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 2px #ccc;
 }
+figure>h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+figure>p{
+    font-size: 20px;
+    color: rgb(22, 22, 22);
+}
 
 figure {
     margin: 0;
     text-align: center;
-  }
+}
   
-  figure img {
+figure img {
     width: 50%;
-  }
+}
   
-  figcaption {
-    text-align: center;
-  }
 
 dialog {
     position: fixed;
