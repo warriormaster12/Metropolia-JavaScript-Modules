@@ -21,22 +21,28 @@ form{
     width: 50%;
 }
 
+head{
+    font-family: 'Ubuntu', sans-serif;
+}
+
 html{
     background: rgb(9,9,121);
     background: radial-gradient(circle, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 50%, rgba(9,9,121,1) 100%); 
 }
 
+
 form>input{
     border-radius: 6px;
     border-color: rgb(0, 0, 0);
     border-style:solid;
+    font-family: 'Ubuntu', sans-serif;
     width: 60px;
-    background-color: white;
 }
 
 form>input:hover{
     border-radius: 6px;
     border-color: rgb(0, 47, 255);
+    background: rgb(199, 199, 199);
     border-style:solid;
     width: 60px;
 }
@@ -45,6 +51,7 @@ form>input:hover{
     width: 25%;
     text-align: center;
 }
+
 
 .container{
     display: inline;

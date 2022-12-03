@@ -13,17 +13,21 @@ let urlWithParams = "";
 
  
 
+
 submit.addEventListener('click', function(e){
     e.preventDefault();
     searchResult();
+    query.clear
 });
 
-query.addEventListener('keypress', function(e){
-    urlWithParams = form.getAttribute('action')+"?q="+e.currentTarget.value;
-    if (e.key === "Enter") {
-        e.preventDefault();
-        searchResult();
-    }
+['change', 'focusout', 'keypress'].forEach(function(e){
+    query.addEventListener(e, function(event){
+        urlWithParams = form.getAttribute('action')+"?q="+event.currentTarget.value;
+        if (event.key === "Enter") {
+            event.preventDefault();
+            searchResult();
+        }
+    });
 });
 
 async function searchResult() {
@@ -52,11 +56,27 @@ async function searchResult() {
                 else {
                     img.src = `https://via.placeholder.com/210x295?text="image not found"`;
                 }
-                let p = document.createElement('p');
-                p.innerHTML = currentObj["show"]["summary"];
+                let summary = document.createElement('p');
+                let genres = document.createElement('p');
+                for(let i = 0; i < currentObj["show"]["genres"].length; i++) {
+                    if(i == 0) {
+                        let strong = document.createElement('strong');
+                        strong.textContent = "Genres: "
+                        genres.appendChild(strong);
+                        genres.appendChild(document.createTextNode(currentObj["show"]["genres"][i]));
+                    }else{
+                        genres.appendChild(document.createTextNode(" | "+currentObj["show"]["genres"][i]));
+                    }
+                }
+                summary.innerHTML = currentObj["show"]["summary"];
                 figure.appendChild(h2);
                 figure.appendChild(img);
-                figure.appendChild(p);
+                if(currentObj["show"]["genres"].length > 0)  {
+                    figure.appendChild(genres);
+                }
+                if(currentObj["show"]["summary"] != "") {
+                    figure.appendChild(summary);
+                }
             }
             article.appendChild(figure);
             section.appendChild(article);
